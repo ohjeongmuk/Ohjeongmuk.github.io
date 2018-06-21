@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>G.G.R</title>
+
+        <style>
+
+            .navbar {
+                overflow: hidden;
+                background-color: white;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                
+            }
+
+            .navbar a {
+                float: right;
+                display: block;
+                color: black;
+                text-align: center;
+                padding: 20px 60px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+            .navbar a:hover {
+                background: black;
+                color: white;
+            }
+
+            
+
+            .c1 {
+                width:180px;
+                height:70px;
+
+            }
+
+            .c2 {
+                width:90%;
+                height:80%;
+
+            }
+
+            body {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color:white;
+            }
+
+
+
+
+            .main {
+                max-width: 1000px;
+                margin-left:20px ;
+            }
+
+
+                h1 {
+                    font-size: 50px;
+                    word-break: break-all;
+                }
+
+                .row {
+                    margin: 10px -16px;
+                }
+
+                /* Add padding BETWEEN each column */
+                .row,
+                .row > .column {
+                    padding: 8px;
+                }
+
+                /* Create three equal columns that floats next to each other */
+                .column {
+                    float: left;
+                    width: 30%;
+                    height:30%;
+                    display: none; /* Hide all elements by default */
+                }
+
+                /* Clear floats after rows */ 
+                .row:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }
+
+                /* Content */
+                .content {
+                    background-color: white;
+                    padding:10px;
+            
+                }
+
+                /* The "show" class is added to the filtered elements */
+                .show {
+                display: block;
+                }
+
+                /* Style the buttons */
+                .btn {
+                border: none;
+                outline: none;
+                padding: 12px 16px;
+                background-color: white;
+                cursor: pointer;
+                }
+
+                .btn:hover {
+                background-color: #ddd;
+                }
+
+                .btn.active {
+                background-color: #666;
+                color: white;
+                }
+                
+
+
+                .heading {
+                    font-size: 25px;
+                    margin-right: 25px;
+                }
+
+                .fa {
+                    font-size: 25px;
+                }
+
+                .checked {
+                    color: orange;
+                }
+
+                /* Three column layout */
+                .side {
+                    float: left;
+                    width: 15%;
+                    margin-top:10px;
+                }
+
+                .middle {
+                    margin-top:10px;
+                    float: left;
+                    width: 70%;
+                }
+
+                /* Place text to the right */
+                .right {
+                    text-align: right;
+                }
+                /* Clear floats after the columns */
+                .tim:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }
+
+                /* The bar container */
+                .bar-container {
+                    width: 100%;
+                    background-color: #f1f1f1;
+                    text-align: center;
+                    color: white;
+                }
+
+                /* Individual bars */
+                .bar-5 {width: 83%; height: 18px; background-color: #4CAF50;}
+                .bar-4 {width: 70%; height: 18px; background-color: #2196F3;}
+                .bar-3 {width: 30%; height: 18px; background-color: #00bcd4;}
+                .bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+                .bar-1 {width: 3%; height: 18px; background-color: #f44336;}
+
+                .bar-10 {width: 75%; height: 18px; background-color: #4CAF50;}
+                .bar-9 {width: 60%; height: 18px; background-color: #2196F3;}
+                .bar-8 {width: 40%; height: 18px; background-color: #00bcd4;}
+                .bar-7 {width: 13%; height: 18px; background-color: #ff9800;}
+                .bar-6 {width: 8%; height: 18px; background-color: #f44336;}
+
+                .bar-15 {width: 60%; height: 18px; background-color: #4CAF50;}
+                .bar-14 {width: 54%; height: 18px; background-color: #2196F3;}
+                .bar-13 {width: 39%; height: 18px; background-color: #00bcd4;}
+                .bar-12 {width: 18%; height: 18px; background-color: #ff9800;}
+                .bar-11 {width: 9%; height: 18px; background-color: #f44336;}
+
+                .bar-20 {width: 79%; height: 18px; background-color: #4CAF50;}
+                .bar-19 {width: 55%; height: 18px; background-color: #2196F3;}
+                .bar-18 {width: 30%; height: 18px; background-color: #00bcd4;}
+                .bar-17 {width: 6%; height: 18px; background-color: #ff9800;}
+                .bar-16 {width: 3%; height: 18px; background-color: #f44336;}
+
+                .bar-25 {width: 54%; height: 18px; background-color: #4CAF50;}
+                .bar-24 {width: 45%; height: 18px; background-color: #2196F3;}
+                .bar-23 {width: 32%; height: 18px; background-color: #00bcd4;}
+                .bar-22 {width: 28%; height: 18px; background-color: #ff9800;}
+                .bar-21 {width: 15%; height: 18px; background-color: #f44336;}
+
+                .bar-30 {width: 91%; height: 18px; background-color: #4CAF50;}
+                .bar-29 {width: 71%; height: 18px; background-color: #2196F3;}
+                .bar-28 {width: 32%; height: 18px; background-color: #00bcd4;}
+                .bar-27 {width: 4%; height: 18px; background-color: #ff9800;}
+                .bar-26 {width: 2%; height: 18px; background-color: #f44336;}
+
+                .bar-35 {width: 78%; height: 18px; background-color: #4CAF50;}
+                .bar-34 {width: 54%; height: 18px; background-color: #2196F3;}
+                .bar-33 {width: 21%; height: 18px; background-color: #00bcd4;}
+                .bar-32 {width: 16%; height: 18px; background-color: #ff9800;}
+                .bar-31 {width: 8%; height: 18px; background-color: #f44336;}
+
+                .bar-40 {width: 80%; height: 18px; background-color: #4CAF50;}
+                .bar-39 {width: 43%; height: 18px; background-color: #2196F3;}
+                .bar-38 {width: 21%; height: 18px; background-color: #00bcd4;}
+                .bar-37 {width: 4%; height: 18px; background-color: #ff9800;}
+                .bar-36 {width: 6%; height: 18px; background-color: #f44336;}
+
+                .bar-45 {width: 94%; height: 18px; background-color: #4CAF50;}
+                .bar-44 {width: 72%; height: 18px; background-color: #2196F3;}
+                .bar-43 {width: 39%; height: 18px; background-color: #00bcd4;}
+                .bar-42 {width: 18%; height: 18px; background-color: #ff9800;}
+                .bar-41 {width: 9%; height: 18px; background-color: #f44336;}
+
+
+
+
+
+
+
+                /* Responsive layout - make the columns stack on top of each other instead of next to each other */
+                @media (max-width: 400px) {
+                    .side, .middle {
+                        width: 100%;
+                    }
+                    .right {
+                        display: none;
+                    }
+                }
+            
+
+
+            
+        
+        </style>
+
+        <!--justify-content:center; : div를 (좌우)가운데 정렬시킴
+         align-items: center;    : div를 (상하)가운데 정렬시킴  --> 
+
+
+    </head>
+
+<!--head 종료-->
+
+    <body>
+            <nav>
+                    <div>          
+                                <!--1-->          
+                        <div class="navbar">
+                                
+                                        <a href=""><i>Service</i></a>
+                                        <a href="마이인포.html"><i>My info</i></a>
+                                        <a href="리뷰.html"><i>Review</i></a>
+                                        <a href="news.html"><i>News</i></a>
+                                        <a href="로그인.html"><i>Sign in</i></a>
+                                        <a style="float:left; padding: 5px 3px 0px 0px; background-color:white;" href="메인페이지.html"  target="_self"><img src="GGR.jpg" alt="No image" title="MAIN PAGE" style="width: 210px; height: 50px;"></a>
+                                        <hr align="center"; width="100%"; size="7px"; noshade="noshade";>
+                        </div>
+                    
+                                 <!--선긋기-->                    
+                    </div>
+                </nav>
+
+                <br><br><br><br>
+
+
+
+            <section>      <!--박스태그 시작-->
+                <div>
+                    <div style="position:fixed; right:3px; bottom:205px;">
+                            <ul style="float:right;">
+                                    <br><br><br> 
+                                        <li style="list-style-type: none"><center><b>SITE.LINK</b></center></li>      
+                                        <li style="list-style-type: none"><a href="https://www2.razer.com/kr-kr" target="_blank"><img src="Razer.png" class="c1"></a></li>
+                                        <li style="list-style-type: none"><a href="https://www.logitech.com/ko-kr" target="_blank"><img src="Logitech.jpg" class="c1"></a></li>
+                                        <li style="list-style-type: none"><a href="https://steelseries.com/" target="_blank"><img src="steelseries.png" class="c1"></a></li>
+                                        <li style="list-style-type: none"><a href="http://www.benq.co.kr/" target="_blank"><img src="Zowie_gear.png" class="c1"></a></li>
+                            </ul>        
+                    </div>
+
+                    <!--여기서 부터 시작 -->
+                    <div class="main">
+
+                            <h1>REVIEW</h1>
+                            <hr>
+                            
+                            <h2>MOUSE FOR GAMER</h2>
+                            
+                            <div id="myBtnContainer">
+                              <button class="btn active" onclick="filterSelection('all')"> 모두</button>
+                              <button class="btn" onclick="filterSelection('nature')"> 레이저</button>
+                              <button class="btn" onclick="filterSelection('cars')"> 스틸시리즈</button>
+                              <button class="btn" onclick="filterSelection('people')"> 로지테크</button>
+                              <button class="btn" onclick="filterSelection('zowie')"> 조위기어</button>
+                            </div>
+                            
+                            <!-- Portfolio Gallery Grid -->
+                            <div class="row">
+                              <div class="column nature">
+                                <div class="content">
+                                  <img src="데스에더.jpg" alt="Mountains" style="width:100%; height:50%;">
+                                  <h4>RAZER 데스에더 엘리트</h4>
+                                    <!--시도-->
+                                    <span class="fa fa-star checked">★</span>
+                                    <span class="fa fa-star checked">★</span>
+                                    <span class="fa fa-star checked">★</span>
+                                    <span class="fa fa-star checked">★</span>
+                                    <span class="fa fa-star checked">★</span>
+                                    <p>고객 선호도가 5인 마우스입니다.</p>
+                                    <hr style="border:3px solid #f1f1f1">
+
+                                    <div class="tim">
+                                    <div class="side">
+                                        <div>5 star</div>
+                                    </div>
+                                    <div class="middle">
+                                        <div class="bar-container">
+                                        <div class="bar-5"></div>
+                                        </div>
+                                    </div>
+                                    <div class="side right">
+                                        <div>83</div>
+                                    </div>
+                                    <div class="side">
+                                        <div>4 star</div>
+                                    </div>
+                                    <div class="middle">
+                                        <div class="bar-container">
+                                        <div class="bar-4"></div>
+                                        </div>
+                                    </div>
+                                    <div class="side right">
+                                        <div>70</div>
+                                    </div>
+                                    <div class="side">
+                                        <div>3 star</div>
+                                    </div>
+                                    <div class="middle">
+                                        <div class="bar-container">
+                                        <div class="bar-3"></div>
+                                        </div>
+                                    </div>
+                                    <div class="side right">
+                                        <div>30</div>
+                                    </div>
+                                    <div class="side">
+                                        <div>2 star</div>
+                                    </div>
+                                    <div class="middle">
+                                        <div class="bar-container">
+                                        <div class="bar-2"></div>
+                                        </div>
+                                    </div>
+                                    <div class="side right">
+                                        <div>4</div>
+                                    </div>
+                                    <div class="side">
+                                        <div>1 star</div>
+                                    </div>
+                                    <div class="middle">
+                                        <div class="bar-container">
+                                        <div class="bar-1"></div>
+                                        </div>
+                                    </div>
+                                    <div class="side right">
+                                        <div>3</div>
+                                    </div>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="column nature">
+                                <div class="content">
+                                <img src="레이저2.jpg" alt="Lights" style="width:100%;height:50%;">
+                                  <h4>RAZER 맘바</h4>
+                                  <!--시도-->
+                                  <span class="fa fa-star checked">★</span>
+                                  <span class="fa fa-star checked">★</span>
+                                  <span class="fa fa-star checked">★</span>
+                                  <span class="fa fa-star checked">★</span>
+                                  <span class="fa fa-star checked">☆</span>
+                                  <p>고객 선호도가 4.5인 마우스입니다.</p>
+                                  <hr style="border:3px solid #f1f1f1">
+                                  
+                                  <div class="tim">
+                                    <div class="side">
+                                      <div>5 star</div>
+                                    </div>
+                                    <div class="middle">
+                                      <div class="bar-container">
+                                        <div class="bar-10"></div>
+                                      </div>
+                                    </div>
+                                    <div class="side right">
+                                      <div>75</div>
+                                    </div>
+                                    <div class="side">
+                                      <div>4 star</div>
+                                    </div>
+                                    <div class="middle">
+                                      <div class="bar-container">
+                                        <div class="bar-9"></div>
+                                      </div>
+                                    </div>
+                                    <div class="side right">
+                                      <div>60</div>
+                                    </div>
+                                    <div class="side">
+                                      <div>3 star</div>
+                                    </div>
+                                    <div class="middle">
+                                      <div class="bar-container">
+                                        <div class="bar-8"></div>
+                                      </div>
+                                    </div>
+                                    <div class="side right">
+                                      <div>40</div>
+                                    </div>
+                                    <div class="side">
+                                      <div>2 star</div>
+                                    </div>
+                                    <div class="middle">
+                                      <div class="bar-container">
+                                        <div class="bar-7"></div>
+                                      </div>
+                                    </div>
+                                    <div class="side right">
+                                      <div>13</div>
+                                    </div>
+                                    <div class="side">
+                                      <div>1 star</div>
+                                    </div>
+                                    <div class="middle">
+                                      <div class="bar-container">
+                                        <div class="bar-6"></div>
+                                      </div>
+                                    </div>
+                                    <div class="side right">
+                                      <div>8</div>
+                                    </div>
+                                  </div>
+                                  <!--끝-->
+                                </div>
+                              </div>
+                              <div class="column nature">
+                                <div class="content">
+                                <img src="레이저3.jpg" alt="Nature" style="width:100%;height:50%;">
+                                <h4>RAZER 바실리스크</h4>
+                                <!--시도-->
+                                <span class="fa fa-star checked">★</span>
+                                <span class="fa fa-star checked">★</span>
+                                <span class="fa fa-star checked">★</span>
+                                <span class="fa fa-star checked">★</span>
+                                <span class="fa fa-star checked"></span>
+                                <p>고객 선호도가 4인 마우스입니다.</p>
+                                <hr style="border:3px solid #f1f1f1">
+                                
+                                <div class="tim">
+                                  <div class="side">
+                                    <div>5 star</div>
+                                  </div>
+                                  <div class="middle">
+                                    <div class="bar-container">
+                                      <div class="bar-15"></div>
+                                    </div>
+                                  </div>
+                                  <div class="side right">
+                                    <div>60</div>
+                                  </div>
+                                  <div class="side">
+                                    <div>4 star</div>
+                                  </div>
+                                  <div class="middle">
+                                    <div class="bar-container">
+                                      <div class="bar-14"></div>
+                                    </div>
+                                  </div>
+                                  <div class="side right">
+                                    <div>54</div>
+                                  </div>
+                                  <div class="side">
+                                    <div>3 star</div>
+                                  </div>
+                                  <div class="middle">
+                                    <div class="bar-container">
+                                      <div class="bar-13"></div>
+                                    </div>
+                                  </div>
+                                  <div class="side right">
+                                    <div>39</div>
+                                  </div>
+                                  <div class="side">
+                                    <div>2 star</div>
+                                  </div>
+                                  <div class="middle">
+                                    <div class="bar-container">
+                                      <div class="bar-12"></div>
+                                    </div>
+                                  </div>
+                                  <div class="side right">
+                                    <div>18</div>
+                                  </div>
+                                  <div class="side">
+                                    <div>1 star</div>
+                                  </div>
+                                  <div class="middle">
+                                    <div class="bar-container">
+                                      <div class="bar-11"></div>
+                                    </div>
+                                  </div>
+                                  <div class="side right">
+                                    <div>9</div>
+                                  </div>
+                                </div>
+                                <!--끝-->
+                                </div>
+                              </div>
+                              
+                              <div class="column cars">
+                                <div class="content">
+                                  <img src="이걸로.jpg" alt="Car" style="width:100%;height:50%;">
+                                  
+                                  <h4>steelseries 라이벌310</h4>
+                                  <!--시도-->
+                                  <span class="fa fa-star checked">★</span>
+                                  <span class="fa fa-star checked">★</span>
+                                  <span class="fa fa-star checked">★</span>
+                                  <span class="fa fa-star checked"></span>
+                                  <span class="fa fa-star checked"></span>
+                                  <p>고객 선호도가 4.5인 마우스입니다.</p>
+                                  <hr style="border:3px solid #f1f1f1">
+                                  
+                                  <div class="tim">
+                                    <div class="side">
+                                      <div>5 star</div>
+                                    </div>
+                                    <div class="middle">
+                                      <div class="bar-container">
+                                        <div class="bar-20"></div>
+                                      </div>
+                                    </div>
+                                    <div class="side right">
+                                      <div>79</div>
+                                    </div>
+                                    <div class="side">
+                                      <div>4 star</div>
+                                    </div>
+                                    <div class="middle">
+                                      <div class="bar-container">
+                                        <div class="bar-19"></div>
+                                      </div>
+                                    </div>
+                                    <div class="side right">
+                                      <div>55</div>
+                                    </div>
+                                    <div class="side">
+                                      <div>3 star</div>
+                                    </div>
+                                    <div class="middle">
+                                      <div class="bar-container">
+                                        <div class="bar-18"></div>
+                                      </div>
+                                    </div>
+                                    <div class="side right">
+                                      <div>30</div>
+                                    </div>
+                                    <div class="side">
+                                      <div>2 star</div>
+                                    </div>
+                                    <div class="middle">
+                                      <div class="bar-container">
+                                        <div class="bar-17"></div>
+                                      </div>
+                                    </div>
+                                    <div class="side right">
+                                      <div>6</div>
+                                    </div>
+                                    <div class="side">
+                                      <div>1 star</div>
+                                    </div>
+                                    <div class="middle">
+                                      <div class="bar-container">
+                                        <div class="bar-16"></div>
+                                      </div>
+                                    </div>
+                                    <div class="side right">
+                                      <div>3</div>
+                                    </div>
+                                  </div>
+                                  <!--끝-->
+
+
+
+
+                                </div>
+                              </div>
+                              <div class="column cars">
+                                <div class="content">
+                                <img src="스틸2.jpg" alt="Car" style="width:100%;height:50%;">
+                                    
+                                <h4>steelseries 센세이310</h4>
+                                  <!--시도-->
+                                  <span class="fa fa-star checked">★</span>
+                                  <span class="fa fa-star checked">★</span>
+                                  <span class="fa fa-star checked">★</span>
+                                  <span class="fa fa-star checked">★</span>
+                                  <span class="fa fa-star checked"></span>
+                                  <p>고객 선호도가 4인 마우스입니다.</p>
+                                  <hr style="border:3px solid #f1f1f1">
+                                  
+                                  <div class="tim">
+                                    <div class="side">
+                                      <div>5 star</div>
+                                    </div>
+                                    <div class="middle">
+                                      <div class="bar-container">
+                                        <div class="bar-25"></div>
+                                      </div>
+                                    </div>
+                                    <div class="side right">
+                                      <div>54</div>
+                                    </div>
+                                    <div class="side">
+                                      <div>4 star</div>
+                                    </div>
+                                    <div class="middle">
+                                      <div class="bar-container">
+                                        <div class="bar-24"></div>
+                                      </div>
+                                    </div>
+                                    <div class="side right">
+                                      <div>45</div>
+                                    </div>
+                                    <div class="side">
+                                      <div>3 star</div>
+                                    </div>
+                                    <div class="middle">
+                                      <div class="bar-container">
+                                        <div class="bar-23"></div>
+                                      </div>
+                                    </div>
+                                    <div class="side right">
+                                      <div>32</div>
+                                    </div>
+                                    <div class="side">
+                                      <div>2 star</div>
+                                    </div>
+                                    <div class="middle">
+                                      <div class="bar-container">
+                                        <div class="bar-22"></div>
+                                      </div>
+                                    </div>
+                                    <div class="side right">
+                                      <div>20</div>
+                                    </div>
+                                    <div class="side">
+                                      <div>1 star</div>
+                                    </div>
+                                    <div class="middle">
+                                      <div class="bar-container">
+                                        <div class="bar-21"></div>
+                                      </div>
+                                    </div>
+                                    <div class="side right">
+                                      <div>15</div>
+                                    </div>
+                                  </div>
+                                  <!--끝-->
+
+                                </div>
+                              </div>
+                              <div class="column cars">
+                                <div class="content">
+                                <img src="라이벌자랑.jpg" alt="Car" style="width:100%;height:50%;">
+                                  
+                                <h4>Steelseries 라이벌600</h4>
+                                <!--시도-->
+                                <span class="fa fa-star checked">★</span>
+                                <span class="fa fa-star checked">★</span>
+                                <span class="fa fa-star checked">★</span>
+                                <span class="fa fa-star checked">★</span>
+                                <span class="fa fa-star checked">★</span>
+                                <p>고객 선호도가 5인 마우스입니다.</p>
+                                <hr style="border:3px solid #f1f1f1">
+                                
+                                <div class="tim">
+                                  <div class="side">
+                                    <div>5 star</div>
+                                  </div>
+                                  <div class="middle">
+                                    <div class="bar-container">
+                                      <div class="bar-30"></div>
+                                    </div>
+                                  </div>
+                                  <div class="side right">
+                                    <div>91</div>
+                                  </div>
+                                  <div class="side">
+                                    <div>4 star</div>
+                                  </div>
+                                  <div class="middle">
+                                    <div class="bar-container">
+                                      <div class="bar-29"></div>
+                                    </div>
+                                  </div>
+                                  <div class="side right">
+                                    <div>71</div>
+                                  </div>
+                                  <div class="side">
+                                    <div>3 star</div>
+                                  </div>
+                                  <div class="middle">
+                                    <div class="bar-container">
+                                      <div class="bar-28"></div>
+                                    </div>
+                                  </div>
+                                  <div class="side right">
+                                    <div>32</div>
+                                  </div>
+                                  <div class="side">
+                                    <div>2 star</div>
+                                  </div>
+                                  <div class="middle">
+                                    <div class="bar-container">
+                                      <div class="bar-27"></div>
+                                    </div>
+                                  </div>
+                                  <div class="side right">
+                                    <div>4</div>
+                                  </div>
+                                  <div class="side">
+                                    <div>1 star</div>
+                                  </div>
+                                  <div class="middle">
+                                    <div class="bar-container">
+                                      <div class="bar-26"></div>
+                                    </div>
+                                  </div>
+                                  <div class="side right">
+                                    <div>2</div>
+                                  </div>
+                                </div>
+                                <!--끝-->
+
+                                </div>
+                              </div>
+                            
+                              <div class="column people">
+                                <div class="content">
+                                  <img src="로지텍1.jpg" alt="Car" style="width:100%;height:50%;">
+                                  
+                                  <h4>Logitech G403</h4>
+                                  <!--시도-->
+                                  <span class="fa fa-star checked">★</span>
+                                  <span class="fa fa-star checked">★</span>
+                                  <span class="fa fa-star checked">★</span>
+                                  <span class="fa fa-star checked">★</span>
+                                  <span class="fa fa-star checked">☆</span>
+                                  <p>고객 선호도가 4.5인 마우스입니다.</p>
+                                  <hr style="border:3px solid #f1f1f1">
+                                  
+                                  <div class="tim">
+                                    <div class="side">
+                                      <div>5 star</div>
+                                    </div>
+                                    <div class="middle">
+                                      <div class="bar-container">
+                                        <div class="bar-35"></div>
+                                      </div>
+                                    </div>
+                                    <div class="side right">
+                                      <div>78</div>
+                                    </div>
+                                    <div class="side">
+                                      <div>4 star</div>
+                                    </div>
+                                    <div class="middle">
+                                      <div class="bar-container">
+                                        <div class="bar-34"></div>
+                                      </div>
+                                    </div>
+                                    <div class="side right">
+                                      <div>54</div>
+                                    </div>
+                                    <div class="side">
+                                      <div>3 star</div>
+                                    </div>
+                                    <div class="middle">
+                                      <div class="bar-container">
+                                        <div class="bar-33"></div>
+                                      </div>
+                                    </div>
+                                    <div class="side right">
+                                      <div>21</div>
+                                    </div>
+                                    <div class="side">
+                                      <div>2 star</div>
+                                    </div>
+                                    <div class="middle">
+                                      <div class="bar-container">
+                                        <div class="bar-32"></div>
+                                      </div>
+                                    </div>
+                                    <div class="side right">
+                                      <div>16</div>
+                                    </div>
+                                    <div class="side">
+                                      <div>1 star</div>
+                                    </div>
+                                    <div class="middle">
+                                      <div class="bar-container">
+                                        <div class="bar-31"></div>
+                                      </div>
+                                    </div>
+                                    <div class="side right">
+                                      <div>8</div>
+                                    </div>
+                                  </div>
+                                  <!--끝-->
+
+
+                                </div>
+                              </div>
+                              <div class="column people">
+                                <div class="content">
+                                <img src="로지텍2.jpg" alt="Car" style="width:100%;height:50%;">
+                                
+                                <h4>Logitech G Pro</h4>
+                                  <!--시도-->
+                                  <span class="fa fa-star checked">★</span>
+                                  <span class="fa fa-star checked">★</span>
+                                  <span class="fa fa-star checked">★</span>
+                                  <span class="fa fa-star checked">★</span>
+                                  <span class="fa fa-star checked">☆</span>
+                                  <p>고객 선호도가 4.5인 마우스입니다.</p>
+                                  <hr style="border:3px solid #f1f1f1">
+                                  
+                                  <div class="tim">
+                                    <div class="side">
+                                      <div>5 star</div>
+                                    </div>
+                                    <div class="middle">
+                                      <div class="bar-container">
+                                        <div class="bar-40"></div>
+                                      </div>
+                                    </div>
+                                    <div class="side right">
+                                      <div>80</div>
+                                    </div>
+                                    <div class="side">
+                                      <div>4 star</div>
+                                    </div>
+                                    <div class="middle">
+                                      <div class="bar-container">
+                                        <div class="bar-39"></div>
+                                      </div>
+                                    </div>
+                                    <div class="side right">
+                                      <div>43</div>
+                                    </div>
+                                    <div class="side">
+                                      <div>3 star</div>
+                                    </div>
+                                    <div class="middle">
+                                      <div class="bar-container">
+                                        <div class="bar-38"></div>
+                                      </div>
+                                    </div>
+                                    <div class="side right">
+                                      <div>21</div>
+                                    </div>
+                                    <div class="side">
+                                      <div>2 star</div>
+                                    </div>
+                                    <div class="middle">
+                                      <div class="bar-container">
+                                        <div class="bar-37"></div>
+                                      </div>
+                                    </div>
+                                    <div class="side right">
+                                      <div>4</div>
+                                    </div>
+                                    <div class="side">
+                                      <div>1 star</div>
+                                    </div>
+                                    <div class="middle">
+                                      <div class="bar-container">
+                                        <div class="bar-36"></div>
+                                      </div>
+                                    </div>
+                                    <div class="side right">
+                                      <div>6</div>
+                                    </div>
+                                  </div>
+                                  <!--끝-->
+
+                                </div>
+                              </div>
+                              <div class="column people">
+                                <div class="content">
+                                <img src="로지텍3.jpg" alt="Car" style="width:100%;height:50%;">
+                                  
+                                <h4>Logitech G900</h4>
+                                <!--시도-->
+                                <span class="fa fa-star checked">★</span>
+                                <span class="fa fa-star checked">★</span>
+                                <span class="fa fa-star checked">★</span>
+                                <span class="fa fa-star checked">★</span>
+                                <span class="fa fa-star checked">★</span>
+                                <p>고객 선호도가 5인 마우스입니다.</p>
+                                <hr style="border:3px solid #f1f1f1">
+                                
+                                <div class="tim">
+                                  <div class="side">
+                                    <div>5 star</div>
+                                  </div>
+                                  <div class="middle">
+                                    <div class="bar-container">
+                                      <div class="bar-45"></div>
+                                    </div>
+                                  </div>
+                                  <div class="side right">
+                                    <div>94</div>
+                                  </div>
+                                  <div class="side">
+                                    <div>4 star</div>
+                                  </div>
+                                  <div class="middle">
+                                    <div class="bar-container">
+                                      <div class="bar-44"></div>
+                                    </div>
+                                  </div>
+                                  <div class="side right">
+                                    <div>72</div>
+                                  </div>
+                                  <div class="side">
+                                    <div>3 star</div>
+                                  </div>
+                                  <div class="middle">
+                                    <div class="bar-container">
+                                      <div class="bar-43"></div>
+                                    </div>
+                                  </div>
+                                  <div class="side right">
+                                    <div>39</div>
+                                  </div>
+                                  <div class="side">
+                                    <div>2 star</div>
+                                  </div>
+                                  <div class="middle">
+                                    <div class="bar-container">
+                                      <div class="bar-42"></div>
+                                    </div>
+                                  </div>
+                                  <div class="side right">
+                                    <div>18</div>
+                                  </div>
+                                  <div class="side">
+                                    <div>1 star</div>
+                                  </div>
+                                  <div class="middle">
+                                    <div class="bar-container">
+                                      <div class="bar-41"></div>
+                                    </div>
+                                  </div>
+                                  <div class="side right">
+                                    <div>9</div>
+                                  </div>
+                                </div>
+                                <!--끝-->
+
+                                </div>
+                              </div>
+                            <!-- END GRID -->
+
+                            
+
+
+<!--여기 아님 -->
+                            </div>
+                            
+                            <!-- END MAIN -->
+                            </div>
+                        <!--여기서 끝-->    
+                    
+                                       
+                </div>
+
+
+
+
+
+
+
+
+
+                <script>
+                        filterSelection("all")
+                        function filterSelection(c) {
+                          var x, i;
+                          x = document.getElementsByClassName("column");
+                          if (c == "all") c = "";
+                          for (i = 0; i < x.length; i++) {
+                            w3RemoveClass(x[i], "show");
+                            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                          }
+                        }
+                        
+                        function w3AddClass(element, name) {
+                          var i, arr1, arr2;
+                          arr1 = element.className.split(" ");
+                          arr2 = name.split(" ");
+                          for (i = 0; i < arr2.length; i++) {
+                            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+                          }
+                        }
+                        
+                        function w3RemoveClass(element, name) {
+                          var i, arr1, arr2;
+                          arr1 = element.className.split(" ");
+                          arr2 = name.split(" ");
+                          for (i = 0; i < arr2.length; i++) {
+                            while (arr1.indexOf(arr2[i]) > -1) {
+                              arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                            }
+                          }
+                          element.className = arr1.join(" ");
+                        }
+                        
+                        
+                        // Add active class to the current button (highlight it)
+                        var btnContainer = document.getElementById("myBtnContainer");
+                        var btns = btnContainer.getElementsByClassName("btn");
+                        for (var i = 0; i < btns.length; i++) {
+                          btns[i].addEventListener("click", function(){
+                            var current = document.getElementsByClassName("active");
+                            current[0].className = current[0].className.replace(" active", "");
+                            this.className += " active";
+                          });
+                        }
+                    </script>
+    </body>
+</html>

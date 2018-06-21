@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>  <!--주석좀 달게요 작성자 오정묵이구요 더 이상 무슨 말이 필요하겠어요??? -->
+<head>
+<title>My home</title>    <!--주석을 달아봤는데 이거 그냥 태그 위치에 상관없이 내가 달고 싶은 곳에 달면 되는거네 슈뱅-->
+<meta charset="UTF-8">
+<meta name="author" content="Oh jeong muk">
+<meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript">
+<meta name="description" content="Free Web tutorials on HTML and CSS"
+<meta http-equiv="refresh"content="4, http://www.naver.com">
+<base href="http://www.naver.com" target="_blank">
+
+<style>
+    body { background-color: pink; }
+    p { color: brown;}
+</style>
+
+</head>
+<body>
+
+    <h1>Gaming Gear Customizing</h1>
+    
+        <form action="01_getdata.jsp" method="get">
+    <filedset>
+        <Legend>개인 정보 입력</Legend>
+        <p>이름 : <input type="text" name="name">
+        <h4>(자신의 성명을 적으십시오.)</h4>
+        </p>
+
+        <p>손크기 : <input type ="text" name="hand size">
+        <h4>ex) F10,F11,F12</h4>
+        </p>
+
+        <p>그립법 : <input type ="text" name="attitude">
+        <h4>ex) claw,finger,fam</h4>
+        </p>
+    
+    <textarea rows="4" cols="40">선호하는 브랜드를 입력하시오.</textarea>
+    
+    <input type="submit" value="입력">
+    <input type="reset" value="다시 작성">
+    </filedset>
+    </form>
+ <!--여기서는 일단 한번끊고 버튼 달기 -->
+    <form>
+        <h3>당신의 그립법을 입력하시오.</h3>
+        <input type="radio" name="grip" value="Farm" checked>팜그립
+        <input type="radio" name="grip" value="claw" checked>클로그립
+        <input type="radio" name="grip" value="Finger" checked>핑거그립
+        <p></p>   <!--한번 끊음:  <p>가 존재 하면 제출/다시작성 줄이 바뀜 -->
+        <input type="submit" value="제출">
+        <input type="reset" value="다시작성">
+
+        <h3>대략적인 손크기를 확인하겠습니다.</h3>
+        <input type="radio" name="hand size" value="F9" checked>F9
+        <input type="radio" name="hand size" value="F10" checked>F10
+        <input type="radio" name="hand size" value="F11" checked>F11
+        <input type="submit" value="제출">
+        <input type="reset" value="다시작성">
+    </form>
+
+
+    
+    
+    
+   

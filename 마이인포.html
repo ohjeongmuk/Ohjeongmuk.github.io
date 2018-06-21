@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>GG</title>
+
+        <style>
+            li.d:hover {
+                background-color:black; color:white;
+                
+                
+
+            }
+
+            .c1 {
+                width:180px;
+                height:70px;
+
+            }
+
+            .c2 {
+                width:90%;
+                height:80%;
+
+            }
+
+
+            div.d1 {
+                background-color:white;
+                width:60%;
+                padding:10px;
+                border:1px 1px 1px 1px;
+                margin:20px;
+                border-style:groove;
+                border-radius: 15px;
+                box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0);
+                margin : 0 auto;
+            }
+
+            body {
+                
+                font-family: Arial, Helvetica, sans-serif;
+                
+            }
+
+            
+
+            .navbar {
+                overflow: hidden;
+                background-color: white;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                
+            }
+
+            .navbar a {
+                float: right;
+                display: block;
+                color: black;
+                text-align: center;
+                padding: 20px 60px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+            .navbar a:hover {
+                background: black;
+                color: white;
+            }
+
+                * {
+                box-sizing: border-box;
+                }
+
+                /* Add padding to containers */
+                .container {
+                    padding: 16px;
+                    background-color: white;
+                    width:80%;
+                    margin-left:7px;
+                }
+
+                /* Full-width input fields */
+                input[type=text], input[type=password] {
+                    width: 100%;
+                    padding: 15px;
+                    margin: 5px 0 22px 0;
+                    display: inline-block;
+                    border: none;
+                    background: #f1f1f1;
+                }
+
+                input[type=text]:focus, input[type=password]:focus {
+                    background-color: #ddd;
+                    outline: none;
+                }
+
+                /* Overwrite default styles of hr */
+                hr.h1 {
+                    border: 1px solid #f1f1f1;
+                    margin-bottom: 25px;
+                }
+
+                /* Set a style for the submit button */
+                .registerbtn {
+                    background-color: black;
+                    color: white;
+                    padding: 16px 20px;
+                    margin: 8px 0;
+                    border: none;
+                    cursor: pointer;
+                    width: 100%;
+                    opacity: 0.9;
+                    border-radius:5px;
+                }
+
+                .registerbtn:hover {
+                    opacity: 1;
+                }
+
+                /* Add a blue text color to links */
+                a.a1 {
+                    color: dodgerblue;
+                }
+
+                /* Set a grey background color and center the text of the "sign in" section */
+                .signin {
+                    background-color: #f1f1f1;
+                    text-align: center;
+                    border-radius:5px;
+                }
+
+                div.d1 {
+                
+                width:30%;
+                padding:10px;
+                
+    
+                
+                
+                margin : 0 auto;
+            }
+            
+        
+        </style>
+
+        <!--justify-content:center; : div를 (좌우)가운데 정렬시킴
+         align-items: center;    : div를 (상하)가운데 정렬시킴  --> 
+
+
+    </head>
+
+<!--head 종료-->
+
+    <body>
+        <nav>
+            <div>          
+                        <!--1-->          
+                <div class="navbar">
+                                <a href=""><i>Service</i></a>
+                                <a href="마이인포.html"><i>My info</i></a>
+                                <a href="리뷰.html"><i>Review</i></a>
+                                <a href="news.html"><i>News</i></a>
+                                <a href="로그인.html"><i>Sign in</i></a>
+                                <a style="float:left; padding: 5px 3px 0px 0px; background-color:white;" href="메인페이지.html"  target="_self"><img src="GGR.jpg" alt="No image" title="MAIN PAGE" style="width: 210px; height: 50px;"></a>
+                                <hr align="center"; width="100%"; size="7px"; noshade="noshade";>
+                </div>
+            
+                         <!--선긋기-->                    
+            </div>
+        </nav>
+        <br><br>
+
+        <!--SECTION-->
+        <section>                <!--박스태그 시작-->
+            <div>  
+                <div style="position:fixed; right:3px; bottom:205px;">
+                        <ul style="float:right;">
+                                <br><br><br> 
+                                 <li style="list-style-type: none"><center><b>SITE.LINK</b></center></li>      
+                                 <li style="list-style-type: none"><a href="https://www2.razer.com/kr-kr" target="_blank"><img src="Razer.png" class="c1"></a></li>
+                                 <li style="list-style-type: none"><a href="https://www.logitech.com/ko-kr" target="_blank"><img src="Logitech.jpg" class="c1"></a></li>
+                                 <li style="list-style-type: none"><a href="https://steelseries.com/" target="_blank"><img src="steelseries.png" class="c1"></a></li>
+                                 <li style="list-style-type: none"><a href="http://www.benq.co.kr/" target="_blank"><img src="Zowie_gear.png" class="c1"></a></li>
+                        </ul>        
+                </div>
+
+                <form action="/action_page.php">
+                    <div class="container">
+                      <h1>My Page</h1>
+                      
+                      <hr class="h1">
+                  
+                      <label for="email"><b>이름</b></label>
+                      <input type="text" placeholder="이름을 입력하세요." name="email" required>
+                  
+                      <label for="psw"><b>손크기</b></label>
+                      <input type="password" placeholder="자신의 손크기를 입력하세요." name="psw" required>
+                  
+                      <label for="psw-repeat"><b>선호하는 마우스 메이커</b></label>
+                      <input type="password" placeholder="Example: razer" name="psw-repeat" required>
+<!--ㅇㅇㅇ-->
+
+            <div style="margin-left:10%;">
+                      <div style="display:inline-block;">
+
+                        <img src="클로그립.jpg" style="border-radius:100%" width="250px" height="250px;">
+                    </div>
+                    <div style="display:inline-block;">
+                        <img src="F10.jpg" style="border-radius:100%" width="250px" height="250px;">
+
+                    </div>
+                    
+                    <div style="display:inline-block;">
+                        <img src="직조선.jpg" style="border-radius:100%" width="250px" height="250px;">
+
+                    </div>
+                </div>
+            
+
+
+                      <hr class="h1">
+                      <p>개인정보는 상업적으로 이용되지 않습니다.</p>
+                  
+                      <button type="submit" class="registerbtn">개인정보 입력</button>
+                    </div>
+                    
+                    <div class="container signin">
+                      <p>아직 로그인을 하지 않으셨나요? <a class="a1" href="로그인.html">Sign in</a>.</p>
+                    </div>
+                  </form>
+
+
+                
+
+
+                <div>
+                        
+                </div>
+                
+
+
+
+                         
+            </div>          <!--박스 태그 종료-->
+        </section>
+        
+        <section>       <!--두 번째 section시작-->
+
+
+
+
+
+
+        </section>
+    </body>
+</html>

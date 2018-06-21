@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="회원가입" content="닉네임/아이디/비밀번호 등등">
+        
+        <title>Sign Up .page</title>
+
+        <style>
+            li:hover {
+                background-color:black; color:white;
+                
+        
+            }
+            body {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .topnav {
+                 overflow: hidden;
+                 background-color: white;
+            }
+
+            .topnav a {
+                float:right;
+                color: black;
+                background-color:white;
+                text-align: center;
+                padding: 16px 16px;
+                text-decoration: none;
+                font-size: 17px;
+                height:70px;
+                width:100px;
+            }
+
+            .topnav a:hover {
+                background-color: black;
+                color: white;
+            }
+        
+        </style>
+
+
+
+    </head>
+    <body>
+            <nav>
+                    <div>
+                        <div>
+                            <figure>
+                                    <center><figcaption><i><h3>Gaming Gear RecommanD</h3></i></figcaption></center>
+                                <a href="메인페이지.html" target="_self"><img src="GGR.jpg" alt="No image" title="MAIN PAGE" style="width: 210px; height: 95px; float: left;"></a>
+                            </figure>
+                        </div>    
+                                <!--1-->
+                        <div class="topnav">
+                                    <a href="#dd"><i>Customer Center</i></a>
+                                    <a href="#about"><i>My info</i></a>
+                                    <a href="#ddd"><i>Review</i></a>
+                                    <a href="news.html"><i>News</i></a>
+                                    <a href="로그인.html"><i>Sign in</i></a>
+                        </div>
+                                 <!--선긋기-->                    
+                        <div>
+                            <center>
+                                <hr align="center" width=100% size="6px" noshade="noshade">  
+                            </center>
+                        </div>    
+                    </div>
+                </nav>
+        <header>
+            <center>
+                <h1>G.G.R. 회원가입</h1>
+                <p></p>
+                <hr/>
+            </center>
+        </header>
+            <section>
+                <article>
+                    <form>
+                        <fieldset>
+                            <center>
+                            <legend>회원 가입 양식</legend>
+                        
+                            <p>이름 : <input type="text" name="name" required placeholder="이름 입력" ></p>
+                            <p>ID : <input type="text" name="ID" required placeholder="아이디 입력"></p>
+                            <p>PW : <input type="password" name="PW" required placeholder="비밀번호 입력"></p>
+                            <p>E-mail : <input type="email" name="myemail"></p>
+                                <p></p>
+                                <h4>E-mail 수신 여부</h4>
+                                    <input type="radio" name="동의" value="ok" checked>동의
+                                    <input type="radio" name="비동의" value="no">비동의                                
+                            <p></p>
+                            <!--개인정보-->
+                            <hr>
+                            <h3>1. 손 크기</h3>
+                            <input type="radio" name="핸드사이즈" value="F9" checked>F9
+                            <input type="radio" name="핸드사이즈" value="F10">F10
+                            <input type="radio" name="핸드사이즈" value="F11">F11
+                            
+                            <h3>2. 마우스 그립법</h3>
+                            <input type="radio" name="핸드사이즈" value="Palm" checked>팜
+                            <input type="radio" name="핸드사이즈" value="Claw">클로
+                            <input type="radio" name="핸드사이즈" value="Finger">핑거
+                            <p></p>
+                            <img src="마우스 그립법.png" alt="No imagine" title="참고하십시오">
+                            <p></p>
+                                <!--게임 장르 (다중 선택)-->
+                            <h3>3. 추천 받고 싶은 기어의 장르를 선택하십시오.</h3>
+                            <input type="checkbox" value="FPS">FPS
+                            <input type="checkbox" value="RPG">RPG
+                            <input type="checkbox" value="AOS">AOS
+                            <input type="checkbox" value="INDI">INDI
+                            <input type="checkbox" value="SPORTS">SPORTS
+                            <p></p>
+
+                            <h3>4. 현제 사용 중인 마우스의 기종을 작성해 주십시오. <br>혹은 지금까지 사용해봤던 마우스를 작성해 주십시오.</h3>
+                            <textarea rows="7" cols="80">작성 공간</textarea>
+                                <hr>
+                            <h2>1. 선호하는 키보드 종류/지금까지 사용해본 키보드를 작성해주십시오.</h2>
+                            <textarea row="7" cols="80">작성 공간</textarea>
+
+                            <h2>2. 다른 게이밍 장비를 추천받고 싶다면 아래 빈칸을 작성하십시오.<br>또한 구 이유를 구체적으로 써주십시오.</h2>
+                            <textarea row="7" cols="80">작성 공간</textarea>
+
+                            
+
+                            
+                            <p></p>
+                            <input type="submit" value="제출">
+                            <input type="reset"  value="다시 작성">
+                            </center>
+                        </fieldset>
+                    </form>
+
+
+
+
+                </article>
+            </section>
+
+
+
+
+
+        
+    </body>
+
+
+
+
+
+
+</html>
